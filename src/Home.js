@@ -11,7 +11,9 @@ export default class Home extends Component {
           <h1>Welcome</h1>
         </div>
         <div className='content' id='content'>
-          <h2>Library Register</h2> 
+          <center>
+            <h1>Library Register System</h1> 
+          </center>
         </div>
       </div>
     );
