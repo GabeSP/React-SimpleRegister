@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './css/custom.css';
 import './css/pure-min.css';
 import './css/side-menu.css';
-import AuthBox from './Auth';
+import {Link} from 'react-router';
 
 class App extends Component {
 
@@ -27,13 +27,7 @@ class App extends Component {
         </div>
 
         <div id="main">
-          <div className="header">
-            <h1>Cadastro</h1>
-          </div>
-
-          <div className="content-custom" id="content">
-            <AuthBox/>
-          </div>
+          {this.props.children}
         </div>
       </div>
     );
