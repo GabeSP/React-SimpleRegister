@@ -87,10 +87,10 @@ class AuthTable extends Component {
         </thead>
         <tbody>
           {
-            this.props.list.map(autor => (
-              <tr key={autor.id}>
-                <td>{autor.name}</td>
-                <td>{autor.email}</td>
+            this.props.list.map(auth => (
+              <tr key={auth.id}>
+                <td>{auth.name}</td>
+                <td>{auth.email}</td>
               </tr>
             ))
           }
@@ -101,7 +101,7 @@ class AuthTable extends Component {
   }
 }
 
-export default class AuthBox extends Component {
+export default class AuthAdmin extends Component {
   
   constructor() {
 

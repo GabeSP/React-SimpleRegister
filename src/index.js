@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import AuthAdmin from './Auth';
-// import BookAdmin from './Book';
+import BookAdmin from './Book';
 import Home from './Home';
 import './index.css';
 import {BrowserRouter as Router, Route,Switch,Link} from 'react-router-dom';
@@ -14,7 +14,7 @@ ReactDOM.render((
       <Switch>
         <Route exact path='/' component={Home} />
         <Route  path='/author' component={AuthAdmin} />
-        <Route  path='/book' /*component={BookAdmin}*/ />
+        <Route  path='/book' component={BookAdmin} />
       </Switch>
     </App>
   </Router>
