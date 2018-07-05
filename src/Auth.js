@@ -130,8 +130,13 @@ export default class AuthBox extends Component {
 
     return (
       <div>
-        <AuthForm/>
-        <AuthTable list={this.state.list}/>
+        <div className='header'>
+          <h1>Register a new Author</h1>
+        </div>
+        <div className='content' id='content'>
+          <AuthForm/>
+          <AuthTable list={this.state.list}/>
+        </div>
       </div>
     );
   }
