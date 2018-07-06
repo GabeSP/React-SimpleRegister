@@ -21,7 +21,7 @@ class AuthForm extends Component {
 
       event.preventDefault();
       $.ajax({
-        url:'http://www.mocky.io/v2/5b3e2d4d3000006400abc5f0',
+        url:'http://www.mocky.io/v2/5b3f6a9f3400005a00001ac8',
         contentType: 'application/json',
         dataType: 'json',
         type: 'post',
@@ -112,7 +112,7 @@ export default class AuthAdmin extends Component {
   componentDidMount(){
     $.ajax({
         type: 'GET',
-        url:'http://www.mocky.io/v2/5b3e2cd23000003a06abc5eb',
+        url:'http://www.mocky.io/v2/5b3f6a5d3400005a00001ac7',
         dataType: 'json',
         success:function(answer) {
           this.setState({list:answer});

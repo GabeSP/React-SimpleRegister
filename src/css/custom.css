@@ -14,10 +14,10 @@ input[type="submit"] {
     width: 50%;
 }
 
-th + th,
+/* th + th,
 td + td {
     width: 85%;
-}
+} */
 
 .table-custom {
     margin-left: 6%;
