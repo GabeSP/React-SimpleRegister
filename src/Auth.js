@@ -12,9 +12,6 @@ class AuthForm extends Component {
         super();
         this.state = {name:'', email:'', password:''};
         this.sendForm = this.sendForm.bind(this);
-        this.setName = this.setName.bind(this);
-        this.setEmail = this.setEmail.bind(this);
-        this.setPassword = this.setPassword.bind(this);
     }
 
     sendForm(event) {
@@ -41,19 +38,10 @@ class AuthForm extends Component {
       });
     }
 
-    setName(event) {
-
-        this.setState({name:event.target.value});
-    }
-
-    setEmail(event) {
-
-        this.setState({email:event.target.value});
-    }
-
-    setPassword(event) {
-
-        this.setState({password:event.target.value});
+    saveChanges(inputName, event) {
+      var changeInput = {};
+      changeInput[inputName] = event.target.value;
+      this.setState(changeInput);
     }
 
     render() {
@@ -61,9 +49,9 @@ class AuthForm extends Component {
         return (
           <div className='pure-form'>
             <form className="pure-form pure-form-aligned form-custom" onSubmit={this.sendForm} method="POST" >
-              <CustomInput id="name" type="text" name="name" value={this.state.name} onChange={this.setName} label="Name" />
-              <CustomInput id="email" type="email" name="email" value={this.state.email} onChange={this.setEmail} label="Email" />
-              <CustomInput id="password" type="password" name="password" value={this.state.password} onChange={this.setPassword} label="Password" />
+              <CustomInput id="name" type="text" name="name" value={this.state.name} onChange={this.saveChanges.bind(this, 'name')} label="Name" />
+              <CustomInput id="email" type="email" name="email" value={this.state.email} onChange={this.saveChanges.bind(this, 'email')} label="Email" />
+              <CustomInput id="password" type="password" name="password" value={this.state.password} onChange={this.saveChanges.bind(this, 'password')} label="Password" />
               <CustomButton label="Save" />
             </form>
           </div>
